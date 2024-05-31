@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Xem dữ liệu</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+      <h1 >Xem dữ liệu</h1>
+      <p>Vào MongoDB</p>
+      <hr>
+      <a href="/them"><button class="btn btn-primary">Thêm sinh viên</button></a>
+    </div>
+    <hr>
+      
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Tên</th>
+            <th>Giới tính</th>
+            <th>Tuổi</th>
+            <th>Điểm Toán</th>
+            <th>Điểm Lý</th>
+            <th>Điểm Hóa</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <% student.forEach(student => { %>
+        <tr>
+          <td><%= student.name %></td>
+          <td><%= student.gender %></td>
+          <td><%= student.age %></td>
+          <td><%= student.diemToan.toFixed(1) %></td>
+          <td><%= student.diemLy.toFixed(1) %></td>
+          <td><%= student.diemHoa.toFixed(1) %></td>
+          <td>
+            <a href="/sua/<%= student._id %>"><span class="glyphicon glyphicon-edit"></span></a> /
+            <a href="/xoa/<%= student._id %>"><span class="glyphicon glyphicon-remove"></span></a>
+          </td>
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+  </body>
+</html>

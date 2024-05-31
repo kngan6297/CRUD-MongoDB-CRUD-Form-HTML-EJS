@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Thêm mới dữ liệu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel='stylesheet' href='../public/stylesheets/style.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1 >Thêm mới dữ liệu</h1>
+    <p>Vào MongoDB</p>
+    <hr>
+  </div>
+  <hr>
+  <form action="/them" method="POST">
+    <div class="form-group">
+      <label for="name">Tên</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="gender">Giới Tính</label>
+        <input type="text" class="form-control" id="gender" name="gender" required>
+      </div>
+
+    <div class="form-group">
+      <label for="age">Tuổi</label>
+      <input type="number" class="form-control" id="age" name="age" required>
+    </div>
+
+    <div class="form-group">
+      <label for="diemToan">Điểm Toán</label>
+      <input type="number" class="form-control" id="diemToan" name="diemToan" required>
+    </div>
+
+    <div class="form-group">
+      <label for="diemLy">Điểm Lý</label>
+      <input type="number" class="form-control" id="diemLy" name="diemLy" required>
+    </div>
+
+    <div class="form-group">
+      <label for="diemHoa">Điểm Hóa</label>
+      <input type="number" class="form-control" id="diemHoa" name="diemHoa" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
+</html>
